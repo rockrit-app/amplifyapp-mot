@@ -1,33 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+
 import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import {AmplifyProvider} from "@aws-amplify/ui-react";
 import awsconfig from './aws-exports';
+import { CardG } from './ui-components';
 Amplify.configure(awsconfig);
-import { HeroLayout3 } from './ui-components';
 
-<AmplifyProvider>
 function App() {
   return (
+<AmplifyProvider>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Motorsport on TV
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
-<HeroLayout3 />
+<CardG />
+</AmplifyProvider>
   );
 }
-</AmplifyProvider>
 export default App;

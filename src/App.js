@@ -5,20 +5,19 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import {AmplifyProvider} from "@aws-amplify/ui-react";
 import awsconfig from './aws-exports';
-import { CardG } from './ui-components';
+import { HeroLayout1 } from './ui-components';
+import { HeroLayout2 } from './ui-components';
+import ReactGA from 'react-ga';
+
 Amplify.configure(awsconfig);
+ReactGA.initialize('G-1LMV46EE20', [options]);
+ReactGA.pageview(window.location.pathname);
+
 
 function App() {
   return (
 <AmplifyProvider>
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Motorsport on TV
-        </p>
-      </header>
-    </div>
-<CardG />
+<HeroLayout2 />
 </AmplifyProvider>
   );
 }

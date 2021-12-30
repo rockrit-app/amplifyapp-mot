@@ -5,8 +5,12 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import {AmplifyProvider} from "@aws-amplify/ui-react";
 import awsconfig from './aws-exports';
-import { HeroLayout1 } from './ui-components';
-import { HeroLayout2 } from './ui-components';
+import { Home1} from './ui-components';
+import { DataStore } from '@aws-amplify/datastore';
+import { Broadcaster } from './models';
+import { Championship } from './models';
+import { Event } from './models';
+import { Session } from './models';
 import ReactGA from 'react-ga';
 
 Amplify.configure(awsconfig);
@@ -17,7 +21,7 @@ ReactGA.pageview(window.location.pathname);
 function App() {
   return (
 <AmplifyProvider>
-<HeroLayout2 />
+<Home1 />
 </AmplifyProvider>
   );
 }
